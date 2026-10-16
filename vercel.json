@@ -1,0 +1,12 @@
+{
+  "buildCommand": "pnpm nx build web --configuration=pwa",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "outputDirectory": "dist/apps/web",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/((?!api(?:/|$)).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

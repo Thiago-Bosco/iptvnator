@@ -23,8 +23,9 @@
         "tv"
     ],
     "scripts": {
-        "postinstall": "electron-builder install-app-deps",
-        "build:frontend": "nx build web",
+  "postinstall": "electron-builder install-app-deps",
+  "dev": "nx serve web --no-tui",
+  "build:frontend": "nx build web",
         "build:frontend:pwa": "nx build web --configuration=pwa",
         "build:backend": "nx build electron-backend --configuration=production",
         "serve:frontend": "nx serve web --no-tui",

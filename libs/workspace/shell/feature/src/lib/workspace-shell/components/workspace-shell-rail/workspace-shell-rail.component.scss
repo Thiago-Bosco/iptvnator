@@ -11,10 +11,11 @@
     gap: 2px;
     height: 100%;
     box-sizing: border-box;
-    padding: 10px 8px;
+    padding: 12px 10px;
     border-right: 1px solid
-        var(--app-rail-border, var(--mat-sys-outline-variant));
+        color-mix(in srgb, var(--mat-sys-outline-variant) 58%, transparent);
     background: var(--app-rail-bg, var(--mat-sys-surface-container-low));
+    box-shadow: inset -1px 0 0 color-mix(in srgb, white 3%, transparent);
     app-region: drag;
     overflow-y: auto;
     overflow-x: hidden;
