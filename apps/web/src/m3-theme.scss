@@ -125,10 +125,10 @@ html {
     @include mat.system-level-state($light-theme);
 
     // ── Light theme design tokens ─────────────────────────────────────────
-    --app-shell-bg: #eef0f3;
-    --app-rail-bg: #eef0f3;
-    --app-header-bg: #eef0f3;
-    --app-content-bg: #f5f6f8;
+    --app-shell-bg: #e9edf3;
+    --app-rail-bg: #e9edf3;
+    --app-header-bg: rgba(233, 237, 243, 0.88);
+    --app-content-bg: #f7f9fc;
     --app-rail-border: transparent;
     --app-on-surface: #1d1b1e;
     --app-hover-overlay: rgba(0, 0, 0, 0.06);
@@ -252,10 +252,10 @@ html {
         // Darkest → lightest: #0d0f12 → #141720 → #1c2030 → #222840
 
         // App shell & navigation
-        --app-shell-bg: #0d0f12;
-        --app-rail-bg: #111318;
-        --app-header-bg: #111318;
-        --app-content-bg: #161a22;
+    --app-shell-bg: #080b11;
+    --app-rail-bg: #0d111a;
+    --app-header-bg: rgba(13, 17, 26, 0.88);
+    --app-content-bg: #111722;
         --app-rail-border: transparent;
         --app-on-surface: #e6e1e5;
         --app-hover-overlay: rgba(255, 255, 255, 0.08);

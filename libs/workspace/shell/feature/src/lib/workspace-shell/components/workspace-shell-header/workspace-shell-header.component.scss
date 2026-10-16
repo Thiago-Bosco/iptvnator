@@ -8,15 +8,16 @@
 .workspace-header {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     // The shell's header band: 56px, taller on macOS when zoomed out.
     height: 100%;
-    padding: 0 24px;
+    padding: 0 28px;
     // macOS: app zoom does not scale the traffic lights, so zoomed out the
     // leading controls keep their 100 % distance from them (see the shell).
     padding-inline-start: max(24px, var(--workspace-header-lights-inset, 0px));
-    border-bottom: 1px solid var(--mat-sys-outline-variant);
+    border-bottom: 1px solid color-mix(in srgb, var(--mat-sys-outline-variant) 58%, transparent);
     background: var(--app-header-bg, var(--mat-sys-surface-container-low));
+    backdrop-filter: blur(18px) saturate(1.15);
     app-region: drag;
 }
 
