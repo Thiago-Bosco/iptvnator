@@ -110,6 +110,31 @@ body.frameless-platform .workspace-header {
     padding-right: 150px;
 }
 
+// Vercel-inspired liquid glass: restrained translucency, hairline borders,
+// and blur only on the fixed chrome so scrolling content stays crisp.
+.workspace-header {
+    background: var(--app-header-bg) !important;
+    border-bottom: 1px solid var(--app-rail-border);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+}
+
+.workspace-header button,
+.workspace-header .mat-mdc-icon-button {
+    border-radius: 10px;
+    transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.workspace-header button:hover,
+.workspace-header .mat-mdc-icon-button:hover {
+    background: var(--app-hover-overlay);
+}
+
+.workspace-header button:active,
+.workspace-header .mat-mdc-icon-button:active {
+    transform: scale(0.97);
+}
+
 // ─── Base ─────────────────────────────────────────────────────────────────────
 // Native UI (scrollbars, form controls, popups) must follow the app theme,
 // not the OS preference. Chromium colors unstyled/native scrollbars from the

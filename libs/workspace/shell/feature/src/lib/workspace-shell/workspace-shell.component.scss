@@ -18,7 +18,9 @@
     height: 100%;
     min-height: 0;
     overflow: hidden;
-    background: var(--app-shell-bg, var(--mat-sys-surface));
+    background:
+        radial-gradient(circle at 92% -18%, rgba(255, 255, 255, 0.08), transparent 34%),
+        var(--app-shell-bg, var(--mat-sys-surface));
     color: var(--mat-sys-on-surface);
 }
 

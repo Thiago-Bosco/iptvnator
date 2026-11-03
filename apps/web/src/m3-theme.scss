@@ -24,12 +24,9 @@ $my-typography: mat.m2-define-typography-config(
 @include mat.typography-hierarchy($my-typography);
 
 // ─── M3 Themes ───────────────────────────────────────────────────────────────
-// One primary color across the app. Azure is the closest M3 prebuilt to the
-// product's "active/selection" blue (#2f7bff / #78adff), so checkboxes, radio
-// buttons, raised CTAs, etc. now read as the same blue as rail selection.
-//
-// Cyan stays on tertiary so the EPG "now" indicator (which uses Material
-// tertiary surfaces) keeps its existing visual role.
+// A neutral graphite palette keeps the interface aligned with Vercel's
+// minimal visual language. Semantic accents remain available for live status,
+// provider identity, warnings, and success states.
 $light-theme: mat.define-theme(
     (
         color: (
@@ -211,10 +208,10 @@ html {
     // Hero
     --app-accent-gradient: linear-gradient(
         135deg,
-        rgba(47, 123, 255, 0.08) 0%,
-        rgba(92, 214, 255, 0.05) 100%
+        rgba(0, 0, 0, 0.045) 0%,
+        rgba(255, 255, 255, 0.72) 100%
     );
-    --app-hero-surface: rgba(47, 123, 255, 0.04);
+    --app-hero-surface: rgba(255, 255, 255, 0.7);
 
     // Detail / hero call to action. The dark theme's light primary (#f2f4f8
     // on #0a0e14) inverts to a dark button on the light theme, so it reads as
@@ -345,10 +342,10 @@ html {
         // Hero section
         --app-accent-gradient: linear-gradient(
             135deg,
-            rgba(120, 173, 255, 0.12) 0%,
-            rgba(92, 214, 255, 0.07) 100%
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.025) 100%
         );
-        --app-hero-surface: rgba(30, 35, 48, 0.9);
+        --app-hero-surface: rgba(255, 255, 255, 0.045);
 
         // Detail / hero call to action (light primary) and rating accent
         --app-cta-bg: #ffffff;
