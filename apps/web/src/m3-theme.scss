@@ -123,19 +123,25 @@ html {
     @include mat.system-level-elevation($light-theme);
     @include mat.system-level-shape($light-theme);
     @include mat.system-level-state($light-theme);
+    --mat-sys-primary: #111111;
+    --mat-sys-on-primary: #ffffff;
+    --mat-sys-primary-container: #e5e5e5;
+    --mat-sys-on-primary-container: #171717;
+    --mat-sys-secondary: #525252;
+    --mat-sys-on-secondary: #ffffff;
 
     // ── Light theme design tokens ─────────────────────────────────────────
-    --app-shell-bg: #e9edf3;
-    --app-rail-bg: #e9edf3;
-    --app-header-bg: rgba(233, 237, 243, 0.88);
-    --app-content-bg: #f7f9fc;
-    --app-rail-border: transparent;
-    --app-on-surface: #1d1b1e;
-    --app-hover-overlay: rgba(0, 0, 0, 0.06);
-    --app-search-bg: rgba(255, 255, 255, 0.7);
-    --app-search-border: rgba(0, 0, 0, 0.1);
-    --app-selection-color: #2f7bff;
-    --app-selection-on-color: #eef4ff;
+            --app-shell-bg: #f7f7f7;
+    --app-rail-bg: #ffffff;
+    --app-header-bg: rgba(255, 255, 255, 0.88);
+    --app-content-bg: #fafafa;
+    --app-rail-border: #eaeaea;
+    --app-on-surface: #171717;
+    --app-hover-overlay: rgba(0, 0, 0, 0.05);
+    --app-search-bg: #ffffff;
+    --app-search-border: #eaeaea;
+    --app-selection-color: #111111;
+    --app-selection-on-color: #ffffff;
     --app-selection-surface: color-mix(
         in srgb,
         var(--app-selection-color) 14%,
@@ -176,19 +182,18 @@ html {
 
     // Widget surfaces — no borders, layered backgrounds
     --app-widget-bg: #ffffff;
-    --app-widget-header-bg: #fafbfc;
-    --app-widget-border: transparent;
-    --app-widget-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
-    --app-widget-header-border: rgba(0, 0, 0, 0.06);
-    --app-card-hover-bg: #f0f2f5;
-    --app-separator: rgba(0, 0, 0, 0.14);
+    --app-widget-header-bg: #fafafa;
+    --app-widget-border: #eaeaea;
+    --app-widget-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --app-widget-header-border: #eaeaea;
+    --app-card-hover-bg: #f5f5f5;
+    --app-separator: #eaeaea;
 
     // Typography — subdued, not pure black
-    --app-heading-color: #1a1d23;
-    --app-body-color: #4a5060;
-    --app-muted-color: #8891a4;
-    --app-eyebrow-color: #7c8495;
+    --app-heading-color: #171717;
+    --app-body-color: #666666;
+    --app-muted-color: #8c8c8c;
+    --app-eyebrow-color: #737373;
 
     // Provider accent colors
     --app-provider-xtream: #2f7bff;
@@ -214,9 +219,9 @@ html {
     // Detail / hero call to action. The dark theme's light primary (#f2f4f8
     // on #0a0e14) inverts to a dark button on the light theme, so it reads as
     // the one solid CTA on either page background.
-    --app-cta-bg: #1a1d23;
-    --app-cta-fg: #f5f6f8;
-    --app-cta-hover-bg: #2a2f3a;
+    --app-cta-bg: #171717;
+    --app-cta-fg: #ffffff;
+    --app-cta-hover-bg: #404040;
     --app-cta-meta-fg: rgba(245, 246, 248, 0.68);
     // Star rating chip: a deep amber, since the chip's 12px text needs
     // 4.5:1 over hero artwork under the light scrim (#a16207 measured 3.4:1).
@@ -245,6 +250,12 @@ html {
         // Only the color roles differ per theme: the elevation shadows are
         // the same black in both, so html's declarations already apply here.
         @include mat.system-level-colors($dark-theme);
+        --mat-sys-primary: #ffffff;
+        --mat-sys-on-primary: #000000;
+        --mat-sys-primary-container: #262626;
+        --mat-sys-on-primary-container: #ffffff;
+        --mat-sys-secondary: #a3a3a3;
+        --mat-sys-on-secondary: #000000;
 
         // ── Dark graphite theme ────────────────────────────────────────────
         // Inspired by both Slack (sidebar distinction) and GitButler (data density)
@@ -252,17 +263,17 @@ html {
         // Darkest → lightest: #0d0f12 → #141720 → #1c2030 → #222840
 
         // App shell & navigation
-    --app-shell-bg: #080b11;
-    --app-rail-bg: #0d111a;
-    --app-header-bg: rgba(13, 17, 26, 0.88);
-    --app-content-bg: #111722;
-        --app-rail-border: transparent;
-        --app-on-surface: #e6e1e5;
+        --app-shell-bg: #000000;
+    --app-rail-bg: #050505;
+    --app-header-bg: rgba(5, 5, 5, 0.88);
+    --app-content-bg: #0a0a0a;
+        --app-rail-border: #1f1f1f;
+        --app-on-surface: #ededed;
         --app-hover-overlay: rgba(255, 255, 255, 0.08);
-        --app-search-bg: rgba(255, 255, 255, 0.05);
-        --app-search-border: rgba(255, 255, 255, 0.09);
-        --app-selection-color: #78adff;
-        --app-selection-on-color: #071225;
+        --app-search-bg: #0a0a0a;
+        --app-search-border: #2a2a2a;
+        --app-selection-color: #ffffff;
+        --app-selection-on-color: #000000;
         --app-selection-surface: color-mix(
             in srgb,
             var(--app-selection-color) 18%,
@@ -301,19 +312,19 @@ html {
 
         // Widget surfaces — NO border, surface contrast does the work
         // Widgets sit on content-bg (#161a22), so widget-bg is notably lighter
-        --app-widget-bg: #1e2330;
-        --app-widget-header-bg: #232840;
-        --app-widget-border: transparent;
-        --app-widget-shadow: none;
-        --app-widget-header-border: rgba(255, 255, 255, 0.05);
-        --app-card-hover-bg: #252b3a;
-        --app-separator: rgba(255, 255, 255, 0.14);
+        --app-widget-bg: #111111;
+        --app-widget-header-bg: #171717;
+        --app-widget-border: #2a2a2a;
+        --app-widget-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        --app-widget-header-border: #2a2a2a;
+        --app-card-hover-bg: #1a1a1a;
+        --app-separator: #2a2a2a;
 
         // Typography — NOT pure white. Warm graphite-tinted whites
-        --app-heading-color: #d8dce8; // soft off-white, not #fff
-        --app-body-color: #8b93a8; // muted blue-grey
-        --app-muted-color: #5c6478; // dimmed
-        --app-eyebrow-color: #6b7494; // eyebrow labels
+        --app-heading-color: #ededed;
+        --app-body-color: #a1a1a1;
+        --app-muted-color: #737373;
+        --app-eyebrow-color: #8c8c8c;
 
         // Provider accents (slightly brighter for dark bg)
         --app-provider-xtream: #78adff;
@@ -340,9 +351,9 @@ html {
         --app-hero-surface: rgba(30, 35, 48, 0.9);
 
         // Detail / hero call to action (light primary) and rating accent
-        --app-cta-bg: #f2f4f8;
-        --app-cta-fg: #0a0e14;
-        --app-cta-hover-bg: #ffffff;
+        --app-cta-bg: #ffffff;
+        --app-cta-fg: #000000;
+        --app-cta-hover-bg: #e5e5e5;
         --app-cta-meta-fg: #5a6274;
         --app-rating-color: #ffcf5c;
 
